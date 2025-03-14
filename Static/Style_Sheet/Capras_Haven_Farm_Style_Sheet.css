@@ -18,9 +18,10 @@ html, body{
 #nav_element_1, #nav_element_2,#nav_element_3, #nav_element_4, #nav_element_5, #nav_element_6{
     font-family: Manrope, Arial, Helvetica, sans-serif !important;
     font-weight: 500 !important;
-    font-size: 20px !important;
+    font-size: clamp(0.8rem,10vw,1rem) !important;
     text-decoration: none !important;
     text-shadow: none !important;
+    justify-content: center;
     color: white;
 }
 
@@ -35,7 +36,7 @@ html, body{
 }
 
 .banner_container{
-    background-image: url("../Images/image_0011_b_s35_l.jpg") !important;
+    background-image: url("../Images/image_0011_b_s35_l.jpg");
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height:100vh;
@@ -67,14 +68,21 @@ html, body{
     background-color: rgb(204, 173, 1) !important;
 }
 
+#logo_image{
+    height:auto;
+    width: 200px;
+}
+
 .banner_text{
     font-family: Manrope, sans-serif;
     font-weight: 700 !important;
-    font-size: 5rem !important;
+    font-size: clamp(2rem,  9.3vw,7rem) !important;
     color: white !important;
     padding-top: 25vh !important;
     width: 65%;
-    text-wrap: nowrap !important;
+    text-wrap: wrap !important;
+    /*text-align: center !important;*/
+
 }
 
 .banner_stats{
@@ -121,6 +129,12 @@ html, body{
     font-weight: 500 !important;
 }
 
+.about_us_image_1 img{
+    max-width: 40vw !important;
+    min-width: 20rem !important;
+    transform: rotate(-3deg) !important;
+}
+
 .regular_button{
     padding: 10px 35px 10px 35px !important;
     background-color: rgba(0,0,0,0%) !important;
@@ -140,36 +154,14 @@ html, body{
     font-size: clamp(3rem, 10vw, 5rem) !important;
 }
 
-/*.about_us_text{*/
-/*    background-image: url("../Images/image_0013.png") !important;*/
-/*    background-repeat: no-repeat !important;*/
-/*    */
-/*}*/
+.livestock_cards{
+    display: flex !important;
+}
+.livestock_carousel{
+    display: none !important;
+}
 
-/*.wave-container {*/
-/*    height: 15vh;*/
-/*    background-color: #212529;*/
-/*    position: relative;*/
-/*}*/
 
-/*.wave-container::before {*/
-/*    content: "";*/
-/*    width: 100%;*/
-/*    height: 94px;*/
-/*    position: absolute;*/
-/*    bottom: -0.3%;*/
-/*    left: 0;*/
-/*    background-size: auto;*/
-/*    background-repeat: repeat no-repeat;*/
-/*    background-position: 25vw bottom;*/
-/*    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='red' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23FFF'/></svg>");*/
-/*}*/
-
-/*@media(max-width:850px) {*/
-/*    .wave-container::before {*/
-/*        height: 20px*/
-/*    }*/
-/*}*/
 
 .product_section{
     --s: 90px;  /* control the size of the grid */
@@ -249,4 +241,109 @@ html, body{
     color: white !important;
     background-color: rgb(204, 173, 1) !important;
 }
+
+
+@media screen and (max-width: 1250px){
+    .banner_container{
+        background-image: url("../Images/image_0011_b_s35_2.png") !important;
+    }
+    .livestock_cards{
+        display: flex !important;
+    }
+    .livestock_carousel{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #logo_image{
+        height:auto;
+        width: 110px;
+    }
+
+    .banner_text{
+
+        width: 100%;
+        text-wrap: wrap !important;
+        /*text-align: center !important;*/
+
+    }
+    .livestock_cards{
+        display: none !important;
+    }
+    .livestock_carousel{
+        display: block !important;
+    }
+
+}
+
+@media screen and (max-width: 580px){
+    #logo_image{
+        height:auto;
+        width: 110px;
+    }
+
+    .banner_text{
+
+        width: 100%;
+        text-wrap: wrap !important;
+        text-align: center !important;
+
+    }
+
+    .banner_container{
+        background-image: url("../Images/image_0011_b_s35_3.png") !important;
+        height:70vh;
+        min-width:100%;
+        text-align: center !important;
+
+    }
+    .banner_text{
+        padding-left: 0 !important;
+    }
+
+    .about_us_section{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .about_us_text{
+        width: 100% !important;
+        font-size: clamp(0.5rem, 1.5vw, 1rem); !important;
+        margin-top: -150px !important;
+    }
+
+    .about_us_image_1 img{
+        width: 100% !important;
+        max-width: 40vw !important;
+        min-width: 20rem !important;
+        transform: rotate(0deg) !important;
+
+    }
+
+    .about_us_image_1{
+        display: none !important;
+        width: 100% !important;
+        /*max-width: 40vw !important;*/
+        /*min-width: 20rem !important;*/
+        margin-top: -90px !important;
+        text-align: center !important;
+
+
+    }
+
+    .livestock_cards{
+        display: none !important;
+    }
+    .livestock_carousel{
+        display: block !important;
+    }
+
+
+}
+
+
+
+
 
