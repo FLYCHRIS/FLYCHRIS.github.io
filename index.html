@@ -11,18 +11,20 @@
 </head>
 <body style="max-width: 100% !important; overflow-x: clip !important;">
 
-        <nav class="navbar navbar-expand p-0 w-100 px-3" style="position: fixed; z-index: 2;  ">
+        <nav class="navbar navbar-expand-lg p-0 w-100 px-3" style="position: fixed; z-index: 2;  ">
             <div class="container-fluid p-0 pt-0" style="max-width:100% !important; overflow-x: clip !important;">
+                <a id="navbar_image" class="navbar-brand px-4 py-4 me-5  " href="./Home.html">
+                    <img class=" pe-3" id="logo_image" src="./Static/Images/caprasHavenLogo_full_3.png" alt="Capra's Haven Logo colored white"/>
+                </a>
+
                 <button class="navbar-toggler bg-white me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="nav_menu  collapse navbar-collapse justify-content-between ps-0 pb-3 m-0 " id="navbarNavDropdown">
                     <div class="d-flex">
-                        <a id="navbar_image" class="navbar-brand px-4 py-4 me-5  " href="./Home.html">
-                            <img class=" pe-3" id="logo_image" src="./Static/Images/caprasHavenLogo_full_3.png" alt="Island Tech University Logo colored white" style="height:auto; width:200px"/>
-                        </a>
-                        <ul class="navbar-nav pe-4 align-items-xl-center">
+
+                        <ul class="navbar-nav pe-4 align-items-center">
                             <li class="nav-item pt-2 pe-4">
                                 <a id="nav_element_1" class="nav-link  " href="#">Home</a>
                             </li>
@@ -58,34 +60,23 @@
                 </div>
             </div>
         </nav>
-        <div class="banner_container container-fluid  banner_image bg-warning p-0 ">
+        <div class="banner_container container-fluid  banner_image p-0  bg-warning" style=" ">
 
             <div class="justify-items-center overflow-hidden">
-                <h2 class="banner_text ps-5">Welcome To <br>Capra's Haven Farm</h2>
-            </div>
-            <div class="banner_stats bg-white d-flex justify-content-center">
-                <div class="banner_stats_1  text-center">
-                    <h3>100+ <br>Goats Sold</h3>
-                </div>
-                <div class="banner_stats_2 text-center">
-                    <h3>>3<br>Breeds</h3>
-                </div>
-                <div class="banner_stats_3 text-center">
-                    <h3>100% <br>Customer Satisfaction</h3>
-                </div>
+                <h2 class="banner_text ps-3">Welcome To <br>Capra's Haven Farm</h2>
             </div>
 
-
-
-
-            <div class="banner_bottom_overlay overflow-hidden " >
-                <img class="overflow-clip" src="Static/Images/border_2.png" style="min-width: 100%;">
-            </div>
         </div>
-        <div class="container-fluid w-100 about_us_section  p-0 pt-5 overflow-clip  ">
+        <div class="container-fluid w-100 about_us_section  p-0 overflow-clip  " >
+
+            <div  style="margin-top:-190px !important; overflow:clip !important; width: 100% !important; ">
+                <img src="Static/Images/border_2.png" style="min-width: 100% !important;"  >
+            </div>
+
+
             <div class="row g-0">
-                <div class="col-6 text-end">
-                    <img src="Static/Images/Untitled%20Project2.png" style=" max-width: 40vw !important; min-width: 30rem !important; transform: rotate(-3deg); "/>
+                <div class="col-6 text-end about_us_image_1">
+                    <img src="Static/Images/Untitled%20Project2.png"/>
                 </div>
                 <div class="col-6  about_us_text  p-5 text-center">
                     <h2>Built On Hard Work</h2>
@@ -104,11 +95,11 @@
         <div class="container-fluid w-100 product_section bg-dark p-0 mb-5 ">
 
             <div class="row live_stock_banner text-center overflow-clip g-0 m-0 ">
-                <div class="col-11 text-center mb-5 m-0 g-0">
+                <div class="col-12 text-center mb-5 m-0 g-0">
                     <h1>Our Quality Breeds</h1>
                 </div>
 
-                <div class="d-flex justify-content-around mb-5 g-0 m-0 ">
+                <div class="d-flex justify-content-around livestock_cards mb-5 g-0 m-0 ">
                     <div class="card border-0 " style="width: 18rem;">
                         <img src="./Static/Images/image_0014.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -127,7 +118,57 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
+                </div>
 
+
+                <div class="livestock_carousel col-12 mb-5">
+                    <div id="aboutUsCarousel" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner password_field ">
+                            <div class="carousel-item active " >
+                                <div class="d-flex flex-row justify-content-center ">
+                                    <div class="card border-0 " style="width: 18rem;">
+                                        <img src="./Static/Images/image_0014.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item" >
+                                <div class="d-flex flex-row justify-content-center ">
+                                    <div class="card border-0" style="width: 18rem;">
+                                        <img src="./Static/Images/image_0015.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-item" >
+                                <div class="d-flex flex-row justify-content-center ">
+                                    <div class="card border-0 " style="width: 18rem;">
+                                        <img src="./Static/Images/image_0016.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev visually-hidden " type="button" data-bs-target="#aboutUsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next visually-hidden " type="button" data-bs-target="#aboutUsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="text-center m-0"><button class="regular_button align-items-end mt-2">Get a qoute</button></div>
