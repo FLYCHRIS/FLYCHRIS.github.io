@@ -69,7 +69,7 @@ html, body{
 }
 
 #logo_image{
-    height:auto;
+    height:200px !important;
     width: 200px;
 }
 
