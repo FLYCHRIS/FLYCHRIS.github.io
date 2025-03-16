@@ -36,7 +36,7 @@ html, body{
 }
 
 .banner_container{
-    background-image: url("../Images/image_0011_b_s35_l.jpg")!important;
+    background-image: url("../Images/image_0011_b_s35_l.jpg");
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height:100vh;
@@ -69,7 +69,7 @@ html, body{
 }
 
 #logo_image{
-    height:auto !important;
+    height:auto;
     width: 200px;
 }
 
@@ -161,8 +161,6 @@ html, body{
     display: none !important;
 }
 
-
-
 .product_section{
     --s: 90px;  /* control the size of the grid */
     --n: 4;     /* control the granularity */
@@ -206,10 +204,12 @@ html, body{
 .section_3_row_1 h2, .section_3_row_2 h2, .section_3_row_3 h2, .section_3_row_4 h2{
     font-family: Manrope, sans-serif;
     font-weight: 700 !important;
-    font-size: 3rem !important;
-    color: black !important;
 
-    text-wrap: nowrap !important;
+    color: black !important;
+    width: 100% !important;
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem); !important;
+
+    text-wrap: wrap !important;
 }
 
 .row_2_options_container{
@@ -219,6 +219,7 @@ html, body{
     max-width: 20rem !important;
     border-radius: 15px;
     padding: 15px 10px 10px 10px;
+    margin-bottom: 20px;
     /*text-align: center !important;*/
 }
 
@@ -260,7 +261,6 @@ html, body{
         height:auto;
         width: 110px;
     }
-    
 
     .banner_text{
 
@@ -276,6 +276,28 @@ html, body{
         display: block !important;
     }
 
+    .section_3_row_2{
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-left: -5px !important;
+        width: 100% !important;
+    }
+    .section_3{
+        margin-left: 0px;
+    }
+
+    .section_3_row_1 h2{
+        margin-left: 40px !important;
+
+    }
+
+    .row_2_options_container{
+        border: solid 5px black !important;
+        max-height:45rem !important;
+        min-width:500px!important;
+        margin-bottom: 20px;
+
+    }
 }
 
 @media screen and (max-width: 580px){
@@ -337,11 +359,35 @@ html, body{
     .livestock_cards{
         display: none !important;
     }
+
     .livestock_carousel{
         display: block !important;
     }
 
+    .section_3_row_2{
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-left: -5px !important;
+        width: 100% !important;
+    }
+    .section_3{
+        margin-left: 0px;
+    }
 
+    .section_3_row_1 h2{
+        margin-left: 30px !important;
+        padding-right: -30px !important;
+    }
+
+    .row_2_options_container{
+        border: solid 5px black !important;
+        max-height:45rem !important;
+        min-width:300px!important;
+        /*max-width: 100% !important;*/
+
+        margin-bottom: 20px;
+
+    }
 }
 
 
