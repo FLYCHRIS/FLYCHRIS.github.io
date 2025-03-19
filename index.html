@@ -299,6 +299,7 @@
                         document.getElementById("contact_button").setAttribute('style', 'background-color: transparent');
 
                     }
+                    console.log("At Top Value: "+atTop)
                 }
             }
         }
@@ -326,6 +327,7 @@
             if (scroll_position > 150){
 
                 navbar.style.background= "rgba(255,255,255,1)"
+                document.getElementById("navbar_image").setAttribute('style', 'box-shadow: 2px 2px 20px 2px rgba(0,0,0,0%) !important');
                 document.getElementById("nav_element_1").setAttribute('style', 'color: rgb(0,0,0) !important');
                 document.getElementById("nav_element_2").setAttribute('style', 'color: rgb(0,0,0) !important');
                 document.getElementById("nav_element_3").setAttribute('style', 'color: rgb(0,0,0) !important');
@@ -345,9 +347,13 @@
                 document.getElementById("nav_element_4").setAttribute('style', 'color: rgb(0,0,0) !important');
                 document.getElementById("contact_button").setAttribute('style', 'background-color: rgb(204, 173, 1)');
             }
+
+            if(scroll_position < 150 && Number(atTop) === 0){
+                navbar.style.background= "transparent"
+            }
+
         }
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
