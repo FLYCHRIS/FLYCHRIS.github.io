@@ -161,7 +161,7 @@ html, body{
     display: none !important;
 }
 
-.product_section{
+.section_4,  .product_section{
     --s: 90px;  /* control the size of the grid */
     --n: 4;     /* control the granularity */
     --t: 4px;   /* the thickness */
@@ -180,7 +180,7 @@ html, body{
     height: auto;
     width: 100%;
     padding-bottom: 200px !important;
-    padding-top: 10rem !important;
+
 
 }
 
@@ -193,6 +193,8 @@ html, body{
     background-color:white;
 }
 
+
+
 .content_container{
     transform:rotate(4deg) !important;
     margin-left: 5px !important;
@@ -200,6 +202,28 @@ html, body{
     /*background-color:white !important;*/
     width: 100% !important;
 }
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #363636;
+    color: white;
+}
+/*.contact-form button {*/
+/*    background: #007BFF;*/
+/*    color: white;*/
+/*    padding: 10px 15px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.contact-form button:hover {*/
+/*    background: #0056b3;*/
+/*}*/
 
 .section_3_row_1 h2, .section_3_row_2 h2, .section_3_row_3 h2, .section_3_row_4 h2{
     font-family: Manrope, sans-serif;
@@ -209,6 +233,42 @@ html, body{
     color: black !important;
     width: 100% !important;
     font-size: clamp(2.5rem, 3.5vw, 3.5rem); !important;
+
+    text-wrap: wrap !important;
+}
+
+.section_4_row_1 h1{
+    font-family: FontsFree-Net-Herbarium, sans-serif;
+    font-weight: 700 !important;
+
+    color: rgb(204, 173, 1) !important;
+    width: 100% !important;
+    font-size: clamp(2rem, 3vw, 5rem) !important;
+    padding-top: 40px !important;
+
+    text-wrap: wrap !important;
+}
+
+.section_4_row_2 h2{
+    font-family: Manrope, sans-serif;
+    font-weight: 700 !important;
+
+    color: rgba(255, 255, 255,0.4) !important;
+    width: 100% !important;
+    font-size: clamp(1rem, 3vw, 2.5rem) !important;
+    padding-top: 10px !important;
+
+    text-wrap: wrap !important;
+}
+
+.section_4_row_2 p{
+    font-family: Manrope, sans-serif;
+    font-weight: 700 !important;
+
+    color: rgb(255, 255, 255) !important;
+    width: 100% !important;
+    font-size: clamp(0.5rem, 2.5vw, 1rem) !important;
+    padding-top: 3px !important;
 
     text-wrap: wrap !important;
 }
@@ -396,8 +456,6 @@ html, body{
         border: solid 5px black !important;
         max-height:45rem !important;
         min-width:300px!important;
-        /*max-width: 100% !important;*/
-
         margin-bottom: 20px;
 
     }
