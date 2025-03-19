@@ -299,11 +299,7 @@
                         document.getElementById("contact_button").setAttribute('style', 'background-color: transparent');
 
                     }
-                    console.log("At Top Value: "+atTop)
                 }
-                // else{
-                //     console.log("Nothing really!")
-                // }
             }
         }
 
@@ -330,12 +326,6 @@
             if (scroll_position > 150){
 
                 navbar.style.background= "rgba(255,255,255,1)"
-                // navbar_element.style.color= "rgb(0,0,0)"
-                // document.getElementById("logo_image").src="./Static/Images/logo-black.png"
-                // document.getElementById("logo_image").alt="Island Tech University Logo colored black"
-                // document.getElementById("navbar_image").setAttribute('style', 'background: rgba(255,255,0,1) !important');
-                // document.getElementById("navbar_image").setAttribute('style', 'border-radius: 0 !important');
-                // document.getElementById("navbar_image").setAttribute('style', 'box-shadow: 2px 2px 20px 2px rgba(255,255,255,40%) !important');
                 document.getElementById("nav_element_1").setAttribute('style', 'color: rgb(0,0,0) !important');
                 document.getElementById("nav_element_2").setAttribute('style', 'color: rgb(0,0,0) !important');
                 document.getElementById("nav_element_3").setAttribute('style', 'color: rgb(0,0,0) !important');
@@ -344,20 +334,16 @@
 
 
 
-            }else{
-                navbar.style.background= "transparent"
-                // navbar_element.style.color= "white"
-                // document.getElementById("logo_image").src="./Static/Images/logo-white.png"
-                // document.getElementById("logo_image").alt="Island Tech University Logo colored white"
-                // document.getElementById("navbar_image").setAttribute('style', 'background: rgba(0,255,0,1) !important');
-                // document.getElementById("navbar_image").setAttribute('style', 'border-radius: 0 !important');
-                document.getElementById("navbar_image").setAttribute('style', 'box-shadow: 2px 2px 20px 2px rgba(0,0,0,0%) !important');
-                document.getElementById("nav_element_1").setAttribute('style', 'color: white !important');
-                document.getElementById("nav_element_2").setAttribute('style', 'color: white !important');
-                document.getElementById("nav_element_3").setAttribute('style', 'color: white !important');
-                document.getElementById("nav_element_4").setAttribute('style', 'color: white !important');
-                document.getElementById("contact_button").setAttribute('style', 'background-color: transparent');
+            }
 
+            if(scroll_position < 150 && Number(atTop) === 1){
+                navbar.style.background= "rgba(255,255,255,1)"
+                document.getElementById("navbar_image").setAttribute('style', 'box-shadow: 2px 2px 20px 2px rgba(0,0,0,0%) !important');
+                document.getElementById("nav_element_1").setAttribute('style', 'color: rgb(0,0,0) !important');
+                document.getElementById("nav_element_2").setAttribute('style', 'color: rgb(0,0,0) !important');
+                document.getElementById("nav_element_3").setAttribute('style', 'color: rgb(0,0,0) !important');
+                document.getElementById("nav_element_4").setAttribute('style', 'color: rgb(0,0,0) !important');
+                document.getElementById("contact_button").setAttribute('style', 'background-color: rgb(204, 173, 1)');
             }
         }
     </script>
