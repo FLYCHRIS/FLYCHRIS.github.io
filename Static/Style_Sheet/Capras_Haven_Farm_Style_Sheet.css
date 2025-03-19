@@ -204,11 +204,11 @@ html, body{
 .section_3_row_1 h2, .section_3_row_2 h2, .section_3_row_3 h2, .section_3_row_4 h2{
     font-family: Manrope, sans-serif;
     font-weight: 700 !important;
+    margin-top: -80px !important;
 
     color: black !important;
     width: 100% !important;
     font-size: clamp(2.5rem, 3.5vw, 3.5rem); !important;
-    margin-top: -80px !important;
 
     text-wrap: wrap !important;
 }
@@ -254,6 +254,18 @@ html, body{
     }
     .livestock_carousel{
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 991px){
+
+    .navbar-nav {
+        margin-bottom: 10px !important;
+    }
+
+    #nav_element_1, #nav_element_2,#nav_element_3, #nav_element_4, #nav_element_5, #nav_element_6{
+        border-left: rgb(204, 173, 1) solid 10px !important;
+        padding-left: 8px !important;
     }
 }
 
