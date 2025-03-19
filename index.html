@@ -17,40 +17,40 @@
                     <img class=" pe-3" id="logo_image" src="./Static/Images/caprasHavenLogo_full_3.png" alt="Capra's Haven Logo colored white"/>
                 </a>
 
-                <button class="navbar-toggler bg-white me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button id="expand-button" class="navbar-toggler bg-white me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="nav_menu  collapse navbar-collapse justify-content-between ps-0 pb-3 m-0 " id="navbarNavDropdown">
                     <div class="d-flex">
 
-                        <ul class="navbar-nav pe-4 align-items-center">
+                        <ul class="navbar-nav pe-4 ps-1 align-items-start">
                             <li class="nav-item pt-2 pe-4">
-                                <a id="nav_element_1" class="nav-link  " href="#">Home</a>
+                                <a id="nav_element_1" class="nav-link  " href="#!">Home</a>
                             </li>
                             <li class="nav-item pt-2 pe-4">
-                                <a id="nav_element_2" class=" nav-link " href="#">About Us</a>
+                                <a id="nav_element_2" class=" nav-link " href="#!">About Us</a>
                             </li>
 
                             <li class="nav-item pt-2 pe-4 dropdown">
-                                <a id="nav_element_3" class="nav-link " href="#" role="button"  aria-expanded="false">
+                                <a id="nav_element_3" class="nav-link " href="#!" role="button"  aria-expanded="false">
                                     Product & Services
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Meats</a></li>
-                                    <li><a class="dropdown-item" href="#">Livestock</a></li>
-                                    <li><a class="dropdown-item" href="#">Master Classes</a></li>
+                                    <li><a class="dropdown-item" href="#!">Meats</a></li>
+                                    <li><a class="dropdown-item" href="#!">Livestock</a></li>
+                                    <li><a class="dropdown-item" href="#!">Master Classes</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item pt-2 pe-4 dropdown">
-                                <a id="nav_element_4" class="nav-link " href="#" role="button"  aria-expanded="false">
+                                <a id="nav_element_4" class="nav-link " href="#!" role="button"  aria-expanded="false">
                                     Farm Content
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">News Letter</a></li>
-                                    <li><a class="dropdown-item" href="#">Gallery</a></li>
-                                    <li><a class="dropdown-item" href="#">Farm Lessons</a></li>
+                                    <li><a class="dropdown-item" href="#!">News Letter</a></li>
+                                    <li><a class="dropdown-item" href="#!">Gallery</a></li>
+                                    <li><a class="dropdown-item" href="#!">Farm Lessons</a></li>
                                 </ul>
                             </li>
 
@@ -264,6 +264,59 @@
 
 
     <script>
+
+        const navbar = document.querySelector(".navbar")
+        let atTop = 0;
+        const mutationCallBack =  (mutationsList, observer) =>{
+            let i = 0
+            for (let mutation of mutationsList){
+                i= i+1
+                if (mutation.type === "attributes" && i === 2){
+                    if (atTop === 0){
+                        atTop = 1;
+                        navbar.style.background= "rgba(255,255,255,1)"
+                        document.getElementById("navbar_image").setAttribute('style', 'box-shadow: 2px 2px 20px 2px rgba(0,0,0,0%) !important');
+                        document.getElementById("nav_element_1").setAttribute('style', 'color: rgb(0,0,0) !important');
+                        document.getElementById("nav_element_2").setAttribute('style', 'color: rgb(0,0,0) !important');
+                        document.getElementById("nav_element_3").setAttribute('style', 'color: rgb(0,0,0) !important');
+                        document.getElementById("nav_element_4").setAttribute('style', 'color: rgb(0,0,0) !important');
+                        document.getElementById("contact_button").setAttribute('style', 'background-color: rgb(204, 173, 1)');
+                    }else{
+                        atTop = 0;
+                        console.log(document.documentElement.scrollTop)
+
+                        if(document.documentElement.scrollTop <150){
+                            navbar.style.background= "transparent"
+                        }else{
+                            navbar.style.background= "rgba(255,255,255,1)"
+                        }
+
+                        document.getElementById("navbar_image").setAttribute('style', 'box-shadow: 2px 2px 20px 2px rgba(0,0,0,0%) !important');
+                        document.getElementById("nav_element_1").setAttribute('style', 'color: white !important');
+                        document.getElementById("nav_element_2").setAttribute('style', 'color: white !important');
+                        document.getElementById("nav_element_3").setAttribute('style', 'color: white !important');
+                        document.getElementById("nav_element_4").setAttribute('style', 'color: white !important');
+                        document.getElementById("contact_button").setAttribute('style', 'background-color: transparent');
+
+                    }
+                    console.log("At Top Value: "+atTop)
+                }
+                // else{
+                //     console.log("Nothing really!")
+                // }
+            }
+        }
+
+        const targetNode = document.getElementById("expand-button");
+
+        const config = {childList: true, attributes: true}
+
+        const observer = new MutationObserver(mutationCallBack)
+
+        observer.observe(targetNode, config)
+
+
+
         window.onscroll=function(){
             const navbar = document.querySelector(".navbar")
             const navbar_element = document.querySelector(".nav_element")
@@ -291,8 +344,7 @@
 
 
 
-            }
-            else{
+            }else{
                 navbar.style.background= "transparent"
                 // navbar_element.style.color= "white"
                 // document.getElementById("logo_image").src="./Static/Images/logo-white.png"
